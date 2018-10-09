@@ -14,6 +14,11 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        stock.add(book);
+        if (!checkIsFull()) stock.add(book);
     }
+
+    public boolean checkIsFull(){
+        return bookCount()>=capacity;
+    }
+
 }
