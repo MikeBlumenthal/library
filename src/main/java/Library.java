@@ -20,6 +20,10 @@ public class Library {
         if (!checkIsFull()) stock.add(book);
     }
 
+    public Book takeBook() {
+        return stock.remove(0);
+    }
+
     public boolean checkIsFull(){
         return bookCount()>=capacity;
     }
